@@ -1,0 +1,76 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/swipercss.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <title>Index Page</title>
+    <style>
+    body{
+      background-color: black;
+    }
+    .tab{
+      margin-bottom:100px;
+    }
+    
+   
+    </style>
+    </head>
+    <body>
+      <div class="row mt-4 ml-4">
+        <div class="col">
+          <img src = "/images/name.png"/>
+        </div>
+        <div class="col">
+          <img src = "/images/center.png"/>
+        </div>
+        <div class="col">
+          <img src = "/images/left.png"/>
+        </div>
+     
+        <!-- <% Object.values(list).forEach(function(values) { %>
+        <p><%= values.name%></p>
+        <p><%= values.base_unit%></p>
+        <p><%= values.quote_unit%></p>
+        <hr>
+        <% }); %> -->
+        <table class="table table-dark mt-4 ">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Last</th>
+              <th scope="col">Buy/sell Price</th>
+              <th scope="col">Volume</th>
+              <th scope="col">Base Unit</th>
+              
+            </tr>
+          </thead>
+          <% var i = 1; %>
+          <% Object.values(list).forEach(function(values) { %>
+            <tr class = 'tab'>
+              <th scope="row" class = 'tab'><%=i++%></th>
+              <td><%= values.name%></td>
+              <td><%= values.last%></td>
+              <td><%= values.sell%></td>
+              <td><%= values.volume%></td>
+              <td><%= values.base_unit%></td>
+            </tr>
+            
+            <% }); %>
+        </table>
+  
+
+    </body>
+</html>
